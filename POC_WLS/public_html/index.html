@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>POC Web Local Storage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script type="text/javascript">
+            function setBackground(){
+                localStorage.bgColor =document.getElementById("color_list").value;
+                document.body.style.backgroundColor=localStorage.bgColor;
+            }
+            
+            function save()
+            {
+                localStorage.setItem('text',document.getElementById("textfield").value);
+            }
+            
+            function loadBackground()
+            {
+                var storedValue=localStorage.getItem('text');
+                if(localStorage.bgColor.length===0)
+                {
+                    localStorage.bgColor="white";
+                }
+                else
+                {
+                    document.body.style.backgroundColor=localStorage.bgColor;
+                    document.getElementById("color_list").value =localStorage.bgColor;
+                }
+                
+                
+                if (storedValue)
+                {
+                    document.getElementById('textfield').value=storedValue;
+                }
+                
+                
+            }
+            
+        </script>
+    </head>
+    <body onLoad="javascript:loadBackground();">
+        <div>
+        <select id="color_list">
+            <option value="white"> Blanco</option>
+            <option value="blue"> Azul</option>
+            <option value="gray"> Gris</option>
+            <option value="black"> Negro</option>
+        </select>
+        <input type="button" value="Color" onclick="javascript: setBackground()">
+        </div>
+        <div>
+        <input type ="text" id ="textfield">
+        <input type="button" value="save" onclick="javascript: save()">
+        </div>
+        <a href="https://www.google.cl"> google</a>
+    </body>
+</html>
