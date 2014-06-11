@@ -1,0 +1,208 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-jun-2014, 16:06:40
+    Author     : pmanquian
+*/
+
+body{
+    background-color: #EDE9D5;
+    font-size: 87.5%;
+    font-family: Arial;
+    line-height: 1.5;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+    outline: 0;
+}
+
+a:link, a:visited{
+    
+}
+a:hover, a:active{
+    
+}
+
+.body{
+    margin:0 auto;
+    width: 70%;
+    clear: both;
+}
+.mainheader nav{
+    background-color: #666;
+    height: 50px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+/*.mainheader nav ul{
+    list-style:none;
+    margin: 0 auto; 
+}*/
+
+.mainheader nav ul li{
+    float: left;
+    display: inline;
+}
+
+.mainheader nav a:link,.mainheader nav a:visited{
+    color : #FFF;
+    display: inline-block;
+    padding: 15px 22px;
+    height: 30px;
+}
+
+.mainheader nav a:hover, .mainheader nav a:active,
+.mainheader nav .active a:link, .mainheader nav .active a:visited{
+    background-color: #CF5C3F;
+    text-shadow: none;
+    height: 20px;
+}
+
+.mainheader nav ul li a {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.mainContent{
+    line-height: 25px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    /*overflow:hidden;*/
+}
+
+.content{
+    width: 70%;
+    float: left;
+}
+
+.topcontent{
+    background-color: #FFF;
+    padding: 3% 5%;
+    margin:2%;
+}
+
+.bottomcontent{
+    background-color: #FFF;
+    padding:3% 5%;
+    margin:2%;
+}
+
+.top_sidebar{
+    width:21%;
+    float:left;
+    background-color: #FFF;
+    padding: 2% 3%;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.middle_sidebar{
+    width:21%;
+    float:left;
+    background-color: #FFF;
+    padding: 2% 3%;
+    margin-left: 3%;
+    margin-bottom: 2%;
+}
+
+.bottom_sidebar{
+    width:21%;
+    float:left;
+    background-color: #FFF;
+    padding: 2% 3%;
+    margin-left: 3%;
+    margin-bottom: 2%;
+}
+
+.mainFooter{
+    width: 100%;
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #666;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1% 1%;
+    
+}
+
+.mainFooter p {
+    width: 92%;
+    margin:auto;
+    color: #FFF;
+}
+
+@media only screen and (min-width:150px) and (max-width:600px)
+{
+    .body{
+        width: 90%;
+        font-size: 95%;
+    }
+    
+    .mainheader nav{
+        height: 180px;
+    }
+
+    .mainheader nav ul{
+        padding-left: 0
+    }
+
+    .mainheader nav ul li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .mainheader nav a:link,.mainheader nav a:visited{
+        padding: 10px 25px;
+        height: 25px;
+        display: block;
+    }   
+    
+    .content{
+        width: 100%;
+        float: left;
+        margin-top: 2%;
+    }
+
+    .topcontent{
+        background-color: #FFF;
+        padding: 3% 5%;
+        margin:2%;
+    }
+
+    .bottomcontent{
+        background-color: #FFF;
+        padding:3% 5%;
+        margin:2%;
+    }
+    
+    .top_sidebar{
+        width:90%;
+        padding: 2% 3%;
+        margin: 2%;
+    }
+
+    .middle_sidebar{
+        width:90%;
+        padding: 2% 3%;
+        margin: 2%;
+    }
+
+    .bottom_sidebar{
+        width:90%;
+        padding: 2% 3%;
+        margin: 2%;
+    }
+    
+}

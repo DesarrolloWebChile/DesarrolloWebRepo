@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Hamburguesas</title>
+	<meta charset="utf-8" />
+        <script class="jsbin" 
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style_AFTP.css" rel="stylesheet" type="text/css"/>
+        
+</head>
+
+<body class="body">
+    <script type="text/javascript"> /*Web Local storage
+ * Local Storage (almacenamiento local) es una base de datos de tipo key — value (clave — valor). Los datos se almacenan en lado de cliente.
+
+ Las principales ventajas antes de los cookies:
+
+•El tamaño del almacenamiento es mas grande (se limita en los ajustes de navegador)
+•Alto rendimiento (debido a que los datos se almacenan en el HDD del cliente)
+•Tiempo de vida illimitado
+•No se envía al servidor sin necesidad
+
+*/
+
+function setBackground()
+{
+	localStorage.bgColor = document.getElementById("color_list").value;
+	document.body.style.backgroundColor = localStorage.bgColor;	
+}
+
+function loadBackground()
+{	
+	
+	if (localStorage.bgColor.length === 0)
+		{
+			localStorage.bgColor = "#4B4A49";
+		}
+	else
+		{
+			document.body.style.backgroundColor = localStorage.bgColor;
+			document.getElementById("color_list").value = localStorage.bgColor;
+		}
+		
+	
+}
+
+</script>
+
+</head>
+
+<body onLoad="javascript:loadBackground();">
+
+<select id="color_list">
+
+<option value="#151515">Negro</option>
+<option value="#8C8C8C">Gris</option>
+<option value="orange">Naranja</option>
+<option value="purple">Purpura</option>
+
+</select>
+
+<input type="button" value="Set Background Color" onClick="javascript:setBackground();" />
+	
+	<header class="mainHeader">
+		<img src="">
+		<nav><ul>
+			<li class="active"><a href="#">Hambuerguesas Hub</a></li>
+			<li><a href="#">Registrate</a></li>
+			<li><a href="#">Contactos</a></li>
+			<li><a href="#">Pedidos</a></li>
+		</ul></nav>
+	</header>
+		
+	<div class="mainContent">
+		<div class="content">	
+				<article class="topcontent">	
+					<header>
+						<h2><a href="#" rel="bookmark" title="Segundo articulo">Hamburguesas</a></h2>
+					</header>
+					
+					<footer>
+						<p class="post-info">Hambuerguesas </p>
+					</footer>
+					
+					<content>
+                                            <img src="http://fotos.fotoflexer.com/62217117bbb71a961310b7a555d6ace8.jpg"/>
+						<p>Ingredientes:- Salmón fresco, 375 gramos- Pan de hamburguesa- Cebolla rehogada, 60 gramos- Queso en loncha- Mostaza- Ketchup- Lechuga- Aceite de oliva</p>
+                                                <section>
+                                                    <ul id="edit" contenteditable="true">
+                                                    <li>Ingrediente Adicionales</li>
+                                                   
+                                                    </ul>
+                                                </section>
+                                                
+					</content>
+					
+				</article>
+
+				<article class="bottomcontent">	
+					<header>
+						<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Hamburguesa del Dia</a></h2>
+					</header>
+
+					<footer>
+						<p class="post-info">Hamburguesa del Dia</p>
+					</footer>
+					
+					<content>
+                                            <img src="http://eladerezo.hola.com/wp-content/uploads/2013/08/hamburguesa.jpg"/>
+						<p>- 1 kilo de carne picada, bien de cerdo o de ternera, al gusto- 1 huev- Pan de hamburguesa- 1 diente de ajo- Perejil- sal- cebolla- aceite de oliva- ketchup- mostaza- unas hojas de lechuga fresca- 1 tomate natural- lonchas de queso</p>
+					</content>
+				
+				</article>
+		</div>
+			
+				<aside class="top-sidebar">
+					<article>
+					<h2>Promocion del dia</h2>
+					<p>Combo papas fritas "Grandes" y Coca-Cola 500ml solo $2500</p>
+				    </article>
+				</aside>
+				
+				<aside class="middle-sidebar">
+					<article>
+					<h2>Promocion de Registrados</h2>
+                                        <script>
+var db = null;
+function html5_storage_support() {
+  try {
+    return 'localStorage' in window && window['localStorage'] === null;
+  } catch (e) {
+    return false;
+  }
+}
+//Revisando si el navegador es compatible
+if (!html5_storage_support) {
+  alert("This Might Be a Good Time to Upgrade Your Browser or Turn On Jeavascript");
+} else {
+  
+	
+	db = openDatabase("MyContacts", "1", "My Personal Contacts", 100000);
+  
+	function storeMyContact(id) {
+		var fullname	= document.getElementById('fullname').innerHTML;
+		var phone		= document.getElementById('phone').innerHTML;
+		var email		= document.getElementById('email').innerHTML;
+		localStorage.setItem('mcFull',fullname);
+		localStorage.setItem('mcPhone',phone);
+		localStorage.setItem('mcEmail',email);
+	}
+  //Obteniendo los valores si esta definida o vacio
+  function getMyContact() {
+    if ( localStorage.getItem('mcFull')) {
+      var fullname	= localStorage.getItem('mcFull');
+      var phone		= localStorage.getItem('mcPhone');
+      var email		= localStorage.getItem('mcEmail');
+    }
+    else {
+      var fullname	= 'Nombre Completo';
+      var phone		= 'Telefono';
+      var email		= 'Correo Electronico';
+    }
+    document.getElementById('fullname').innerHTML = fullname;
+    document.getElementById('phone').innerHTML = phone;
+    document.getElementById('email').innerHTML = email;
+  }
+
+  function clearLocal() {
+    clear: localStorage.clear(); 
+    return false;
+  }
+}
+</script>
+<div id="myContacts">
+  <div>Nombre: <span id="fullname" contenteditable="true" onkeyup="storeMyContact(this.id)"></span></div>
+  <div>Telefono: <span id="phone" contenteditable="true" onkeyup="storeMyContact(this.id)"></span></div>
+  <div>Email: <span id="email" contenteditable="true" onkeyup="storeMyContact(this.id)"></span></div>
+  <div><a onclick="clearLocal(); getMyContact();" href="javascript:void(0);">Limpiar Datos</a></div>
+</div>
+<script>
+  getMyContact();
+</script>
+					<p>Esta promocion solo esta disponible si eres usuario registrado</p>
+				    </article>
+				</aside>				
+
+				<aside class="bottom-sidebar">
+					<article>
+					<h2>Reto Hamburguesa Hub</h2>
+					<p>Si logras comer 7 Hambuergusas Hub en combo agrandado tienes una semana gratis! </p>
+				    </article>
+				</aside>	
+	</div>
+	
+	<footer class="mainFooter">
+		<p>Hambuerguesas Hub</p>
+	</footer>
+
+</body>
+</html>
