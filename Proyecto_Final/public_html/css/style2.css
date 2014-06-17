@@ -1,0 +1,25 @@
+.form img {
+    margin: 5px;
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+.mainfooter{
+    width: 100%;
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #666;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1% 1%;
+    display: inline;
+    
+}
+
+.mainfooter Total{
+    color: rgb(0,0,0);
+    
+}

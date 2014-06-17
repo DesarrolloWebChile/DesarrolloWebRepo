@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style2.css" rel="stylesheet" type="text/css"/>
+        <script src="js/Func_Orden.js" type="text/javascript"></script>
+        <script src="js/confirmacion.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="form">
+            <div>Hambueguesa Simple de carne</div>
+            <img src="images/opc1.jpg" alt=""/>
+            <div>Cantidad: <input type="text" size="2" maxlength="2" id="valor1" onkeyup="sumar();"></div>
+        </div>
+        <div class="form">
+             <div>Hambueguesa Doble de carne</div>
+             <img src="images/opc2.jpg" alt=""/>
+             <div>Cantidad: <input type="text" size="2" maxlength="2" id="valor2" onkeyup="sumar();"></div>
+         </div>
+        <div class="form">
+             <div>Hambueguesa simple de Pollo</div>
+             <img src="images/opc3.jpg" alt=""/>
+             <div>Cantidad: <input type="text" size="2" maxlength="2" id="valor3" onkeyup="sumar();"></div>
+         </div>
+
+        <footer class="mainfooter">
+            <div>
+                <div>
+                    Total: <input type="text" id="total" disabled value="0">               
+                </div>
+                <div id="total2" class="Total">               
+                </div>
+                <div>
+                    <button type="button" onclick="getConfirmation(total2)">Pagar</button>
+                </div>
+                
+            </div>
+        </footer>
+        
+        
+    </body>
+</html>
